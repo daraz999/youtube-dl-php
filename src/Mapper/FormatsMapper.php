@@ -11,7 +11,7 @@ class FormatsMapper implements MapperInterface
         $formats = [];
 
         foreach ($data as $format) {
-            if (in_array($field, array('protocol', 'segment_urls', 'initialization_url'))) {
+            if (in_array($format, array('protocol', 'segment_urls', 'initialization_url'))) {
                 continue;
             }
             
