@@ -1,5 +1,5 @@
 {
-    "name": "norkunas/youtube-dl-php",
+    "name": "daraz999/youtube-dl-php",
     "description": "youtube-dl wrapper for php",
     "keywords": ["youtube", "youtube-dl"],
     "require": {
@@ -13,8 +13,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Tomas",
-            "email": "norkunas.tom@gmail.com"
+            "name": "Darius",
+            "email": "dariussm@gmail.com"
         }
     ],
     "autoload": {
