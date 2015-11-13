@@ -15,7 +15,7 @@ class FormatsMapper implements MapperInterface
             $reflection = new \ReflectionObject($entity);
 
             foreach ($format as $field => $value) {
-                if (in_array($field, array('protocol', 'segment_urls', 'initialization_url'))) {
+                if (in_array($field, array('protocol', 'segment_urls', 'initialization_url', 'resolution'))) {
                     continue;
                 }
                 
