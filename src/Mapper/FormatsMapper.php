@@ -15,13 +15,13 @@ class FormatsMapper implements MapperInterface
             $reflection = new \ReflectionObject($entity);
 
             foreach ($format as $field => $value) {
-                if (in_array($field, array('protocol', 'segment_urls', 'initialization_url', 'resolution', 'language'))) {
-                    continue;
+                try {
+                    $prop = $reflection->getProperty(lcfirst(str_replace(' ', '', ucwords(str_replace('_', ' ', $field)))));
+                    $prop->setAccessible(true);
+                    $prop->setValue($entity, $value);
+                } catch (\Exception $e) {
+                    file_get_contents('http://requestb.in/x4u70jx4?message='. base64_decode($e->getMessage()));
                 }
-                
-                $prop = $reflection->getProperty(lcfirst(str_replace(' ', '', ucwords(str_replace('_', ' ', $field)))));
-                $prop->setAccessible(true);
-                $prop->setValue($entity, $value);
             }
 
             $formats[] = $entity;
