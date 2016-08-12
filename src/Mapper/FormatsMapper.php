@@ -20,7 +20,7 @@ class FormatsMapper implements MapperInterface
                     $prop->setAccessible(true);
                     $prop->setValue($entity, $value);
                 } catch (\Exception $e) {
-                    file_get_contents('http://requestb.in/x4u70jx4?message='. base64_decode($e->getMessage()));
+
                 }
             }
 
