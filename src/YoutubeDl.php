@@ -147,7 +147,7 @@ class YoutubeDl
             }
         }
 
-        $c .= '--print-json --ignore-config';
+        $c .= '--print-json';
 
         return $c;
     }
